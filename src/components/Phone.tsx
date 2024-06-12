@@ -11,20 +11,20 @@ const Phone = ({imgSrc, className, dark=false, ...props} : PhoneProps) => {
     return (
         <div className={cn("relative pointer-events-none z-50 overflow-hidden", className)} {...props}>
             <Image 
-                className="pointer-events-none z-50 select-none"
+                className="pointer-events-none z-50 select-none w-full h-full"
                 src={dark ? "/phone-template-dark-edges.png" : "/phone-template-white-edges.png"}
                 alt="Phone Image"
-                width={200}
-                height={200}
+                width={500}
+                height={500}
             />
 
             <div className="absolute -z-10 inset-0">
                 <Image 
-                    className="object-cover"
+                    className="object-cover w-full h-full"
                     src={imgSrc}
                     alt="overlaying phone image"
-                    width={200}
-                height={200}
+                    width={500}
+                    height={500}
                 />
             </div>
         </div>
